@@ -1,6 +1,6 @@
-# ActiveLook TENNIS
+# ActiveLook® TENNIS
 
-Description : Keep the score of your tennis match in your Augmented Reality ActiveLook sport glasses
+Description : Keep the score of your tennis match in your Augmented Reality ActiveLook® sport glasses
 
 ### License
 
@@ -19,7 +19,7 @@ limitations under the License.
 ### Requirements
 
 You will need the following:
-- A pair of ActiveLook glasses
+- A pair of ActiveLook® glasses
 - Android Studio
 - An android device with BLE
 
@@ -35,9 +35,9 @@ In order to get the best performances, the ActiveLookSDK directory should be the
 
 ### detailled description of this Android application
 
-This "ActiveLook Tennis" application connects to Activelook smart glasses to display, live, and right in your field of vision, the key information you need to keep you always informed.
+This "ActiveLook® Tennis" application connects to Activelook® smart glasses to display, live, and right in your field of vision, the key information you need to keep you always informed.
 
-The application will first pair via BTLE with your Activelook smart glasses.
+The application will first pair via BTLE with your Activelook® smart glasses.
 
 This application is dedicated to tennis players and will always give you the match score in your eyes.
 
