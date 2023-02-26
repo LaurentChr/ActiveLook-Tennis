@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ActiveLookTennis.demo"
+    android:versionName="1.1">
+
+    <application
+        android:name=".DemoApp"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/tennis3"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyActiveLookApplication">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.MyActiveLookApplication.NoActionBar"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ScanningActivity"
+            android:theme="@style/Theme.MyActiveLookApplication"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"
+        tools:ignore="ManifestOrder" />
+    <uses-feature android:name="android.hardware.sensor.stepcounter" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+
+</manifest>

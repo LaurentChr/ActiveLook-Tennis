@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+}
+
+def apikeyPropertiesFile = rootProject.file("./.env")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.ActiveLookTennis.demo"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 3
+        versionName "1.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                // rootProject.name is set in the file : settings.gradle
+                outputFileName = rootProject.name
+                outputFileName += "-v" + android.defaultConfig.versionName
+                if (variant.buildType.name == "release") {
+                    outputFileName += ".apk"
+                } else {
+                    outputFileName += "-debug.apk"
+                }
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.github.activelook:android-sdk:v4.4.2'
+}

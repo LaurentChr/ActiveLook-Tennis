@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:textAlignment="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/disconnected_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/largeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/large_text" />
+
+            <Button
+                android:id="@+id/scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary_200"
+                android:text="@string/button_scan" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/connected_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+           <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/PlayerA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:background="@color/teal_200"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Player A" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/PlayerB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:background="@color/teal_200"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Player B" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/TieBreak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textIsSelectable="false"
+                android:textStyle="bold"
+                android:text=" " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/Set35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="0dp"
+                    android:layout_weight="5"
+                    android:backgroundTint="@color/primary_900"
+                    android:text="3\n\nset" />
+                <Space
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/PointA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text=" 0 " />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusPointA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusPointA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+                <Space
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/PointB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text=" 0 " />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusPointB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusPointB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:padding="0dp"
+                        android:layout_weight="2"
+                        android:text="-" />
+                </LinearLayout>
+                <Space
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/GameA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/teal_200"
+                    android:text=" A " />
+
+                <Button
+                    android:id="@+id/GameA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    android:layout_weight="3"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+                
+                <Button
+                    android:id="@+id/GameA2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="2dp"
+                    android:visibility="invisible"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameA2"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:visibility="invisible"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/GameA3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="2dp"
+                    android:visibility="invisible"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameA3"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/GameA4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="2dp"
+                    android:visibility="invisible"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameA4"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/GameA5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="2dp"
+                    android:visibility="invisible"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameA5"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:visibility="invisible"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/GameB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/teal_200"
+                    android:text=" B " />
+                <Button
+                    android:id="@+id/GameB1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    android:layout_weight="3"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameB1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameB1"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/GameB2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="2dp"
+                    android:visibility="invisible"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameB2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameB2"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/GameB3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    android:layout_weight="3"
+                    android:visibility="invisible"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameB3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:visibility="invisible"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameB3"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/GameB4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="2dp"
+                    android:visibility="invisible"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameB4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameB4"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:visibility="invisible"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/GameB5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="2dp"
+                    android:visibility="invisible"
+                    android:text="0" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/PlusGameB5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:visibility="invisible"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/white"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/MinusGameB5"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:visibility="invisible"
+                        android:padding="0dp"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/sensorSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Light Sensor"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lumaLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lumaTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Luma:" />
+
+                <SeekBar
+                    android:id="@+id/luminanceSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="10" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+            <Button
+                android:id="@+id/button_disconnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/error"
+                android:text="@string/menu_disconnect" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

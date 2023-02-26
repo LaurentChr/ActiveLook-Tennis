@@ -1,0 +1,3 @@
+include ':ActiveLookSDK'
+include ':app'
+rootProject.name = "Active Look Tennis"
