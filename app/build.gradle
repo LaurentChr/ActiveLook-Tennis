@@ -27,6 +27,7 @@ android {
         }
         android.applicationVariants.all { variant ->
             variant.outputs.all {
+                resValue "string", "app_version", "${defaultConfig.versionName}"
                 // rootProject.name is set in the file : settings.gradle
                 outputFileName = rootProject.name
                 outputFileName += "-v" + android.defaultConfig.versionName
