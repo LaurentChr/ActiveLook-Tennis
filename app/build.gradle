@@ -9,7 +9,8 @@ apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
 android {
     compileSdkVersion 33
-
+    namespace 'com.ActiveLookTennis.demo'
+    
     defaultConfig {
         applicationId "com.ActiveLookTennis.demo"
         minSdkVersion 21
