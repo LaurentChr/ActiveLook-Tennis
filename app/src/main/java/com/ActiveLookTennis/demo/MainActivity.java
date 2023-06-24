@@ -610,10 +610,22 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        final Glasses g = this.connectedGlasses;
+
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        if (id == R.id.about_app) {Toast.makeText(this.getApplicationContext(),
+                getString(R.string.app_name) + "\nVersion " + getString(R.string.app_version),
+                Toast.LENGTH_LONG).show();
+            return true;}
+        if (id == R.id.about_glasses) {
+            if( g!=null) {Toast.makeText(this.getApplicationContext(),
+                    "Glasses Name : " + g.getName() + "\n"
+                            + "Firmware : " + g.getDeviceInformation().getFirmwareVersion(),
+                    Toast.LENGTH_LONG).show();}
+            else {Toast.makeText(this.getApplicationContext(),
+                    "No connected glasses found!",
+                    Toast.LENGTH_LONG).show();}
+            return true;}
         return super.onOptionsItemSelected(item);
     }
 
