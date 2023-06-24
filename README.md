@@ -28,11 +28,15 @@ You will need the following:
 - Android Studio
 - An android device with BLE
 
-### Main files to modify
+### File to create and add at the root : .env
 
-First you need to add a file called '.env' at the source of the project. This file will contain only 2 lines :
+First, you need to add a file called '.env' at the source of the project. This file will contain only 2 lines :
+```
 ACTIVELOOK_SDK_TOKEN = ""
 ACTIVELOOK_CFG_PASSWORD = 0xDEADBEEF
+```
+
+### Main files to modify
 
 The name of the app is defined in the strings.xml file.
 
