@@ -30,6 +30,10 @@ You will need the following:
 
 ### Main files to modify
 
+First you need to add a file called '.env' at the source of the project. This file will contain only 2 lines :
+ACTIVELOOK_SDK_TOKEN = ""
+ACTIVELOOK_CFG_PASSWORD = 0xDEADBEEF
+
 The name of the app is defined in the strings.xml file.
 
 * app\src\main\res\layout\content_scrolling.xml
