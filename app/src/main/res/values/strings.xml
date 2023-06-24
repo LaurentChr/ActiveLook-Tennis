@@ -3,7 +3,7 @@
     <string name="large_text">
         This is an ActiveLook Sample App for Tennis.\n\n
         If you use the gesture sensor (hide the left part of the glasses) once, you can increase your score and twice, the other player score.\n\n
-        You can choose for a match in 3 or 5sets.\n\n
+        You can choose for a match in 3 or 5 sets.\n\n
     </string>
     <string name="action_settings">Settings</string>
     <string name="button_scan">Scan</string>
