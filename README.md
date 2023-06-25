@@ -26,7 +26,12 @@ limitations under the License.
 You will need the following:
 - A pair of ActiveLook® glasses
 - Android Studio
-- An android device with BLE
+- An android phone/watch with BLE
+
+Known supported glasses :
+- Julbo EVAD-1 : Premium smart glasses providing live data for intense sporting experiences (https://www.julbo.com/en_gb/evad-1)
+- Engo 1 : Cycling & Running action glasses (http://engoeyewear.com/)
+- Cosmo Connected : GPS & cycling (https://cosmoconnected.com/fr/produits-velo-trottinette/cosmo-vision)
 
 ### File to create and add at the root : .env
 
@@ -46,7 +51,7 @@ The name of the app is defined in the strings.xml file.
 
 In order to get the best performances, the ActiveLookSDK directory should be the latest release from : https://github.com/ActiveLook/android-sdk
 
-### detailled description of this Android application
+### detailed description of this Android application
 
 This "ActiveLook® Tennis" application connects to Activelook® smart glasses to display, live, and right in your field of vision, the key information you need to keep you always informed.
 
@@ -59,9 +64,3 @@ Usage :
 - place your left hand in front of your left eye twice (within 1sec) : it increase the score of the player B
 
 It takes in account tennis matches in 2 or 3 winning sets. You can also change the names of the players A and B.
-
-
-Known supported Devices :
-- Julbo EVAD-1 : Premium smart glasses providing live data for intense sporting experiences (https://www.julbo.com/en_gb/evad-1)
-- Engo 1 : Cycling & Running action glasses (http://engoeyewear.com/)
-- Cosmo Connected : GPS & cycling (https://cosmoconnected.com/fr/produits-velo-trottinette/cosmo-vision)
