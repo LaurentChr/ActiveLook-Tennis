@@ -1,4 +1,4 @@
-This application does not store, nor collect any data from the users and fully respect the user privacy.
+This application, designed by me, Laurent CHARRIER, does not store, nor collect any data from the users and fully respect the user privacy.
 
 This application use the users position only for BlueTooth purpose.
 
