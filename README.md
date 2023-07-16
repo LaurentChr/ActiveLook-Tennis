@@ -2,7 +2,7 @@
 
 Description : Keep the score of your tennis match in your Augmented Reality ActiveLook® sport glasses
 
-<p align="center"> <img src="./tennis_1024x500.PNG"/ </p>
+<p align="center"> <img src="./ActiveLook_tennis_1024.png"/ </p>
 The application can be found on GooglePlay :
     https://play.google.com/store/apps/details?id=com.ActiveLookTennis.demo 
 
